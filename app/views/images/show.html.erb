@@ -5,5 +5,10 @@
   <%= @image.title %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @image.media.url if @image.media.url.present? %>
+</p>
+
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
